@@ -1,4 +1,5 @@
-import { AppSidebar } from "@/components/app-sidebar"
+import { CrmSidebar } from "@/components/crm-sidebar"
+import { DashboardHeader } from "@/components/dashboard-header"
 import {
   SidebarInset,
   SidebarProvider,
@@ -20,8 +21,9 @@ export default function DashboardLayout({
           } as React.CSSProperties
         }
       >
-        <AppSidebar variant="inset" />
+        <CrmSidebar variant="inset" />
         <SidebarInset>
+          <DashboardHeader />
           {children}
         </SidebarInset>
       </SidebarProvider>
